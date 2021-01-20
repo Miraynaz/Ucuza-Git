@@ -1,0 +1,74 @@
+﻿@model WebApplication3.Models.User
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="Css/fontawesome.min.css">
+        <link rel="stylesheet" href="Css/bootstrap.min.css">
+        <link rel="stylesheet" href="Css/main.css">
+
+
+        <title>Ucuza Git.kon</title>
+    </head>
+    <body>
+        <h1>Edit</h1>
+
+        <h4>User</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Kullanici_Lakap" class="control-label">Lakap</label>
+                        <input asp-for="Kullanici_Lakap" class="form-control" />
+                        <span asp-validation-for="Kullanici_Lakap" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Kullanici_Sifre" class="control-label">Şifre</label>
+                        <input asp-for="Kullanici_Sifre" class="form-control" />
+                        <span asp-validation-for="Kullanici_Sifre" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Kullanici_Adi" class="control-label">Kullanıcı Ad</label>
+                        <input asp-for="Kullanici_Adi" class="form-control" />
+                        <span asp-validation-for="Kullanici_Adi" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Kullanici_Soyadi" class="control-label">Kullanıcı Soyad</label>
+                        <input asp-for="Kullanici_Soyadi" class="form-control" />
+                        <span asp-validation-for="Kullanici_Soyadi" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Kullanici_SehirID" class="control-label">Plaka</label>
+                        <input asp-for="Kullanici_SehirID" class="form-control" />
+                        <span asp-validation-for="Kullanici_SehirID" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="kullanici_Resim" class="control-label">Resim</label>
+                        <input asp-for="kullanici_Resim" class="form-control" />
+                        <span asp-validation-for="kullanici_Resim" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Değişiklikleri Kaydet" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
+        </body></html>
